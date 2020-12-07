@@ -8,4 +8,3 @@ choco install 7zip -y
 choco install javaruntime -y
 choco install pdf24 -y
 choco install classic-shell -y
-
