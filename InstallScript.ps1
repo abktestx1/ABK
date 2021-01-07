@@ -8,4 +8,3 @@ choco install 7zip -y
 choco install jre8 -y
 choco install pdf24 -y
 choco install classic-shell -y
-choco install virtualclonedrive -y
