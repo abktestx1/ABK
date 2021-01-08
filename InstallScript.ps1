@@ -8,3 +8,9 @@ choco install 7zip -y
 choco install jre8 -y
 choco install pdf24 -y
 choco install classic-shell -y
+Set-Service -Name "FDResPub" -StartupType Automatic
+Restart-Service -Force -Name "FDResPub"
+Set-Service -Name "SSDPSRV" -StartupType Automatic
+Restart-Service -Force -Name "SSDPSRV"
+Set-Service -Name "upnphost" -StartupType Automatic
+Restart-Service -Force -Name "upnphost"
