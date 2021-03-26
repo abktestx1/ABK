@@ -18,3 +18,6 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnec
 netsh advfirewall set allprofiles state off
 powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6
+Get-AppxPackage *Microsoft.549981C3F5F10* | Remove-AppxPackage
+Set-NetFirewallRule -DisplayGroup "Datei- und Druckerfreigabe" -Enabled True
+Set-NetFirewallRule -DisplayGroup "Netzwerkerkennung" -Enabled True
