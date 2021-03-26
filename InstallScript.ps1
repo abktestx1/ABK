@@ -37,12 +37,13 @@ Disable-ScheduledTask -TaskName "Microsoft\Windows\Customer Experience Improveme
 Disable-ScheduledTask -TaskName "Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" | Out-Null
 Disable-ScheduledTask -TaskName "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" | Out-Null
 #Deinstallation von Apps
-get-appxpackage -Name Microsoft.Xboxapp | Remove-AppxPackage
-Get-AppxPackage *xboxIdentityprovider* | Remove-AppxPackage
-Get-AppxPackage *getstarted* | Remove-AppxPackage
-Get-AppxPackage *solitairecollection* | Remove-AppxPackage
-Get-AppxPackage *officehub* | Remove-AppxPackage
-Get-AppxPackage *OneNote* | Remove-AppxPackage
-Get-AppxPackage *feedback* | Remove-AppxPackage
-Get-AppxPackage *zunemusic* | Remove-AppxPackage
-Get-AppxPackage *windowsmaps* | Remove-AppxPackage
+Get-AppxPackage -allusers -Name Microsoft.Xboxapp | Remove-AppxPackage
+Get-AppxPackage -allusers *xboxIdentityprovider* | Remove-AppxPackage
+Get-AppxPackage -allusers *getstarted* | Remove-AppxPackage
+Get-AppxPackage -allusers *solitairecollection* | Remove-AppxPackage
+Get-AppxPackage -allusers *officehub* | Remove-AppxPackage
+Get-AppxPackage -allusers *OneNote* | Remove-AppxPackage
+Get-AppxPackage -allusers *feedback* | Remove-AppxPackage
+Get-AppxPackage -allusers *zunemusic* | Remove-AppxPackage
+Get-AppxPackage -allusers *windowsmaps* | Remove-AppxPackage
+Get-AppxPackage -allusers *Microsoft.XboxGamingOverlay* | Remove-AppxPackage
