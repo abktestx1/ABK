@@ -36,3 +36,9 @@ Disable-ScheduledTask -TaskName "Microsoft\Windows\Autochk\Proxy" | Out-Null
 Disable-ScheduledTask -TaskName "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" | Out-Null
 Disable-ScheduledTask -TaskName "Microsoft\Windows\Customer Experience Improvement Program\UsbCeip" | Out-Null
 Disable-ScheduledTask -TaskName "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" | Out-Null
+#Deinstallation von Apps
+get-appxpackage -Name Microsoft.Xboxapp | Remove-AppxPackage
+Get-AppxPackage *getstarted* | Remove-AppxPackage
+Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+ps onedrive | Stop-Process -Force
+start-process "$env:windir\SysWOW64\OneDriveSetup.exe" "/uninstall"
