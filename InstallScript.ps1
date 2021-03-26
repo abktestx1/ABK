@@ -14,3 +14,6 @@ Set-Service -Name "SSDPSRV" -StartupType Automatic
 Restart-Service -Force -Name "SSDPSRV"
 Set-Service -Name "upnphost" -StartupType Automatic
 Restart-Service -Force -Name "upnphost"
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+netsh advfirewall set allprofiles state off
+powercfg -SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
