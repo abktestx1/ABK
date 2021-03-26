@@ -38,9 +38,13 @@ Disable-ScheduledTask -TaskName "Microsoft\Windows\Customer Experience Improveme
 Disable-ScheduledTask -TaskName "Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector" | Out-Null
 #Deinstallation von Apps
 get-appxpackage -Name Microsoft.Xboxapp | Remove-AppxPackage
+Get-AppxPackage *xboxIdentityprovider* | Remove-AppxPackage
 Get-AppxPackage *getstarted* | Remove-AppxPackage
 Get-AppxPackage *solitairecollection* | Remove-AppxPackage
 ps onedrive | Stop-Process -Force
 start-process "$env:windir\SysWOW64\OneDriveSetup.exe" "/uninstall"
 Get-AppxPackage *officehub* | Remove-AppxPackage
 Get-AppxPackage *OneNote* | Remove-AppxPackage
+Get-AppxPackage *feedback* | Remove-AppxPackage
+Get-AppxPackage *zunemusic* | Remove-AppxPackage
+Get-AppxPackage *windowsmaps* | Remove-AppxPackage
