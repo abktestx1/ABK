@@ -42,3 +42,4 @@ Get-AppxPackage *getstarted* | Remove-AppxPackage
 Get-AppxPackage *solitairecollection* | Remove-AppxPackage
 ps onedrive | Stop-Process -Force
 start-process "$env:windir\SysWOW64\OneDriveSetup.exe" "/uninstall"
+Get-AppxPackage *officehub* | Remove-AppxPackage
